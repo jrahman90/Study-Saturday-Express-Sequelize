@@ -17,7 +17,7 @@ app.use('/tests', tests);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(err.status || 500).send('Something broke!');
 });
 
 const init = async () => {
