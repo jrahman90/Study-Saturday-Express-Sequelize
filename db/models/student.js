@@ -18,7 +18,7 @@ const Student = db.define('student', {
     },
   },
 });
-
+// before making this table run this quick code 
 Student.beforeCreate((student) => {
   const nameFirst = student.firstName;
   const nameLast = student.lastName;
